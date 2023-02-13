@@ -4,9 +4,9 @@
 
 **Week 1 Outcomes**
 
-- Identify libraries that can be used to superimpose images on videos
+- Identify libraries (with pros/cons) that can be used to superimpose images on videos
 
-- Identify headless browsers (using HTML/CSS) or other approaches to generate transparent PNGs with custom text
+- Identify headless browsers (using HTML/CSS) or other approaches (with pros/cons) to generate transparent PNGs with custom text
 
 - Meeting: We can share the different approaches people have found, and who will attempt which
 
@@ -16,7 +16,7 @@
 - Test libraries on making edits to images on videos
 - Design and create transparent PNGs with custom text
 
-- Identify website platforms/frameworks to build a site with for next week
+- Identify website platforms/frameworks  (with pros/cons) to build a site with for next week
 
 - Meeting: We can compare the outputs of the approaches on image-to-video superimposing and the created PNGs
 

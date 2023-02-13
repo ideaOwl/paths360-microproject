@@ -1,5 +1,6 @@
 # Paths360 Microproject Roles and Goals
 
+Video link to [sample video files](https://drive.google.com/drive/folders/1euur8aLBV_Abup3Qtt1PHgDoUT5JdU3x?usp=sharing)
 
 ### Roles
 - [Data Science: Identify & Blur Faces+Plates off 2.4TB of 8fps videos](roles/data-science/readme.md)
