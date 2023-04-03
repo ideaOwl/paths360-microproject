@@ -1,0 +1,88 @@
+Extract Data
+Rename exiftool (-k).exe to exiftool.exe to use it in command prompt
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" - exiftool exe location. 
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -ee "C:\Users\nikhi\Documents\Nikhil\Data for Good\sample1.mp4"
+-Displays data in cmd
+
+-Get the datta in csv format
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -ee "C:\Users\nikhi\Documents\Nikhil\Data for Good\sample1.mp4" -csv >"C:\Users\nikhi\Documents\Nikhil\Data for Good\mydata.csv"
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -ee "C:\Users\nikhi\Documents\Nikhil\Data for Good\sample1.mp4" -csv >"C:\Users\nikhi\Documents\Nikhil\Data for Good\mydata.csv" -GPSLatitude -GPSLongitude Data for Good
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -ee "C:\Users\nikhi\Documents\Nikhil\Data for Good\sample1.mp4" -csv -r >"C:\Users\nikhi\Documents\Nikhil\Data for Good\mydata.csv" -GPSLatitude -GPSLongitude Data for Good
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -csv -r -ee "C:\Users\nikhi\Documents\Nikhil\Data for Good\sample1.mp4">"C:\Users\nikhi\Documents\Nikhil\Data for Good\mydata.csv"
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -ee -GPSLatitude -GPSLongitude "C:\Users\nikhi\Documents\Nikhil\Data for Good\sample1.mp4">  "C:\Users\nikhi\Documents\Nikhil\Data for Good\mydata.csv"
+
+After ">" enter the output file
+
+Get the data in gpx file 
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -p "C:\Users\nikhi\Documents\Nikhil\Data for Good\gpx.fmt" -ee "C:\Users\nikhi\Documents\Nikhil\Data for Good\sample1.mp4" > "C:\Users\nikhi\Documents\Nikhil\Data for Good\sampl1gpx.gpx"
+
+--------------------------------------------------------------------------------------------------------------------
+
+Tried following commands to edit or update GPX in video file
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -overwrite_original_in_place "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3_new.gpx" -gps:all "C:\Users\nikhi\Documents\Nikhil\Data for Good\sample1.mp4"
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -overwrite_original_in_place -GPSLatitude -GPSLongitude"C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3_new.gpx" -gps:all "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4" -api largefilesupport=1
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -overwrite_original_in_place -tagsfromfile "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3_gpx1.gpx" -gps:all "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4" -api largefilesupport=1
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -overwrite_original_in_place -GPSLatitude -GPSLongitude "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3_gpx1.gpx" -gps:all "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4" -api largefilesupport=1
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -api LargeFileSupport -v0 -progress -GPSLatitude=53.467997 -GPSLongitude=-113.43597 -GPSDateTime="2022:10:04 19:40:38" -GPSDateTimeOriginal="2022:10:04 19:40:38" -GPSDateTimeDigitized="2022:10:04 19:40:38" "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -GPSLatitude=53.467997 -GPSLongitude=-113.43597 -GPSDateTime="2022:10:04 19:40:38" -GPSDateTimeOriginal="2022:10:04 19:40:38" -GPSDateTimeDigitized="2022:10:04 19:40:38" -overwrite_original "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -GPSLatitude=53.467997 -GPSLongitude=-113.43597 -GPSAltitude=698.900024414063 -GPSDateTime="2022:10:04 19:40:40" -overwrite_original "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4" -api largefilesupport=1
+
+-TRied with condition 
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -if '$GPSLongitude==-113.43597 and $GPSLatitude==53.467997' and $GPSAltitude==698.900024414063 -TrackCreateDate="2022:10:04 19:40:40" "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -m -n -if '$GPSLongitude==113.43597 and $GPSLatitude==53.467997 and $GPSTrackSegmentIndex==0 and $GPSTrackIndex==1' -TrackCreateDate="2022:10:04 19:40:40" "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -m -n -if '$lat==53.467997 and $lon==-113.43597' -GPSDateTime="2022:10:04 19:40:40" "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -GPSLatitude=53.467997 -GPSLongitude=-113.43597 -GPSDateTimeOriginal="2022:10:04 19:40:37" -TrackCreateDate="2022:10:04 19:40:37" -TrackModifyDate="2022:10:04 19:40:37" -api LargeFileSupport=1 "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -overwrite_original -tagsfromfile "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.gpx" "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+-Delete 
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -timecreated<datetimeoriginal -datecreated<datetimeoriginal "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -Model "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+exiftool -overwrite_original -gpslatitude="LATITUDE" -gpslongitude="LONGITUDE" -gpstimestamp="DATE/TIME" VIDEOFILE.mp4
+
+geotag
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -geotag "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3_gpx1.gpx" '-geotime<${createdate}--7:00' "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+retreive and check
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -p "C:\Users\nikhi\Documents\Nikhil\Data for Good\gpx.fmt" -ee "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4" > "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3_gpx2.gpx" -api largefilesupport=1
+
+
+Tried these commands for Writable tags errors
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -tagsfromfile "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3_gpx1.gpx" "-datetimeoriginal<time" "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -P -overwrite_original -XMP:GpsLatitude=40.6892 -XMP:GPSLongitude=-74.0445 -XMP:GPSDateTime="2023:02:12 12:00:00Z" -Quicktime:GPSCoordinates="40.6892, -74.0445" Y:\!temp\aa\Test.mp4
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -GPSLatitude=53.467997 -GPSLongitude=-113.43597 -GPSAltitude=698.900024414063 -GPSDateTime="2022:10:04 19:40:40" -overwrite_original -progress "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
+
+
+
+"C:\Users\nikhi\Documents\Nikhil\Data for Good\exiftool.exe" -gps:all= -overwrite_original "C:\Users\nikhi\Documents\Nikhil\Data for Good 3\sample3.mp4"
